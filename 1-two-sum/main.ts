@@ -12,7 +12,7 @@ function twoSum(nums: number[], target: number): number[] {
 }
 
 Deno.test("Example 1", () => {
-  const input: [nums: number[], target: number] = [[2, 7, 11, 15], 9];
+  const input: Parameters<typeof twoSum> = [[2, 7, 11, 15], 9];
 
   const output = twoSum(...input);
 
@@ -20,7 +20,7 @@ Deno.test("Example 1", () => {
 });
 
 Deno.test("Example 2", () => {
-  const input: [nums: number[], target: number] = [[3, 2, 4], 6];
+  const input: Parameters<typeof twoSum> = [[3, 2, 4], 6];
 
   const output = twoSum(...input);
 
@@ -28,7 +28,7 @@ Deno.test("Example 2", () => {
 });
 
 Deno.test("Example 3", () => {
-  const input: [nums: number[], target: number] = [[3, 3], 6];
+  const input: Parameters<typeof twoSum> = [[3, 3], 6];
 
   const output = twoSum(...input);
 
