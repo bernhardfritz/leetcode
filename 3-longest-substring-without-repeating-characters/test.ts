@@ -1,22 +1,5 @@
 import { assertEquals } from "https://deno.land/std@0.207.0/assert/mod.ts";
-
-function lengthOfLongestSubstring(s: string): number {
-  let max = 0;
-  for (let i = 0; i < s.length - max; i++) {
-    const set = new Set<string>();
-    for (let j = i; j < s.length; j++) {
-      const c = s[j];
-      if (set.has(c)) {
-        break;
-      }
-      set.add(c);
-    }
-    if (set.size > max) {
-      max = set.size;
-    }
-  }
-  return max;
-}
+import { lengthOfLongestSubstring } from "./mod.ts";
 
 Deno.test("Example 1", () => {
   const input: Parameters<typeof lengthOfLongestSubstring> = ["abcabcbb"];
